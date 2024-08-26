@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wellcome_banners",
+  "info": {
+    "singularName": "wellcome-banner",
+    "pluralName": "wellcome-banners",
+    "displayName": "WellcomeBanner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true,
+      "maxLength": 250
+    },
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

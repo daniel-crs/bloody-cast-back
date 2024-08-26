@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jogos",
+  "info": {
+    "singularName": "jogo",
+    "pluralName": "jogos",
+    "displayName": "Jogo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainImg": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tag": {
+      "type": "string",
+      "required": true,
+      "default": "jogos"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "descrition": {
+      "type": "text",
+      "required": true
+    },
+    "score": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 5
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "destaque": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "richText": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}

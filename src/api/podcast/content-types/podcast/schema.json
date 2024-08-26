@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcasts",
+  "info": {
+    "singularName": "podcast",
+    "pluralName": "podcasts",
+    "displayName": "podcast",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "audio": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "participants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::participant.participant",
+      "inversedBy": "podcasts"
+    },
+    "tag": {
+      "type": "string",
+      "required": true,
+      "default": "podcast"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "destaque": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "richText": {
+      "type": "blocks",
+      "required": true
+    }
+  }
+}
