@@ -900,20 +900,19 @@ export interface ApiFilmeFilme extends Schema.CollectionType {
   };
 }
 
-export interface ApiJogoJogo extends Schema.CollectionType {
-  collectionName: 'jogos';
+export interface ApiGameGame extends Schema.CollectionType {
+  collectionName: 'games';
   info: {
-    singularName: 'jogo';
-    pluralName: 'jogos';
-    displayName: 'Jogo';
-    description: '';
+    singularName: 'game';
+    pluralName: 'games';
+    displayName: 'Game';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     mainImg: Attribute.Media<'images'> & Attribute.Required;
-    tag: Attribute.String & Attribute.Required & Attribute.DefaultTo<'jogos'>;
+    tag: Attribute.String & Attribute.Required & Attribute.DefaultTo<'games'>;
     title: Attribute.String & Attribute.Required;
     descrition: Attribute.Text & Attribute.Required;
     score: Attribute.Float &
@@ -934,9 +933,9 @@ export interface ApiJogoJogo extends Schema.CollectionType {
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::jogo.jogo', 'oneToOne', 'admin::user'> &
+    createdBy: Attribute.Relation<'api::game.game', 'oneToOne', 'admin::user'> &
       Attribute.Private;
-    updatedBy: Attribute.Relation<'api::jogo.jogo', 'oneToOne', 'admin::user'> &
+    updatedBy: Attribute.Relation<'api::game.game', 'oneToOne', 'admin::user'> &
       Attribute.Private;
   };
 }
@@ -1178,7 +1177,7 @@ declare module '@strapi/types' {
       'api::bloody-cast-info.bloody-cast-info': ApiBloodyCastInfoBloodyCastInfo;
       'api::contact.contact': ApiContactContact;
       'api::filme.filme': ApiFilmeFilme;
-      'api::jogo.jogo': ApiJogoJogo;
+      'api::game.game': ApiGameGame;
       'api::livro.livro': ApiLivroLivro;
       'api::musica.musica': ApiMusicaMusica;
       'api::participant.participant': ApiParticipantParticipant;

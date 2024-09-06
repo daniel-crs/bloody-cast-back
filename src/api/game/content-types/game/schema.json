@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "jogos",
+  "collectionName": "games",
   "info": {
-    "singularName": "jogo",
-    "pluralName": "jogos",
-    "displayName": "Jogo",
-    "description": ""
+    "singularName": "game",
+    "pluralName": "games",
+    "displayName": "Game"
   },
   "options": {
     "draftAndPublish": true
@@ -13,17 +12,17 @@
   "pluginOptions": {},
   "attributes": {
     "mainImg": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     },
     "tag": {
       "type": "string",
       "required": true,
-      "default": "jogos"
+      "default": "games"
     },
     "title": {
       "type": "string",
@@ -36,8 +35,8 @@
     "score": {
       "type": "float",
       "required": true,
-      "min": 1,
-      "max": 5
+      "max": 5,
+      "min": 1
     },
     "date": {
       "type": "date",
