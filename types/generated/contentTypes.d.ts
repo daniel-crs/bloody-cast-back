@@ -868,7 +868,7 @@ export interface ApiFilmeFilme extends Schema.CollectionType {
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
     author: Attribute.String & Attribute.Required;
-    score: Attribute.Integer &
+    score: Attribute.Float &
       Attribute.Required &
       Attribute.SetMinMax<
         {
@@ -916,7 +916,7 @@ export interface ApiJogoJogo extends Schema.CollectionType {
     tag: Attribute.String & Attribute.Required & Attribute.DefaultTo<'jogos'>;
     title: Attribute.String & Attribute.Required;
     descrition: Attribute.Text & Attribute.Required;
-    score: Attribute.Integer &
+    score: Attribute.Float &
       Attribute.Required &
       Attribute.SetMinMax<
         {
@@ -957,7 +957,7 @@ export interface ApiLivroLivro extends Schema.CollectionType {
     tag: Attribute.String & Attribute.Required & Attribute.DefaultTo<'livros'>;
     title: Attribute.String & Attribute.Required;
     description: Attribute.Text & Attribute.Required;
-    score: Attribute.Integer &
+    score: Attribute.Float &
       Attribute.SetMinMax<
         {
           min: 1;
@@ -1005,7 +1005,7 @@ export interface ApiMusicaMusica extends Schema.CollectionType {
     tag: Attribute.String & Attribute.Required & Attribute.DefaultTo<'musicas'>;
     title: Attribute.String & Attribute.Required;
     author: Attribute.String & Attribute.Required;
-    score: Attribute.Integer &
+    score: Attribute.Float &
       Attribute.Required &
       Attribute.SetMinMax<
         {
